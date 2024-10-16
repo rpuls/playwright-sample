@@ -19,9 +19,27 @@
 &emsp;
 &emsp;
 
-*Learn the how to get started with Playwright testing on the LambdaTest platform.*
+*Learn how to get started with Playwright testing on the LambdaTest platform.*
 
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample)
+## About this fork
+
+This is a fork of the sample repo by LambdaTest, with added functionality to run the project on Railway.app instead of Gitpod. A nixpacks file has been added to facilitate deployment on Railway.
+
+### Environment Variables
+
+When deploying on Railway, you need to set the following environment variables:
+
+- `LT_USERNAME`: Your LambdaTest username
+- `LT_ACCESS_KEY`: Your LambdaTest access key
+
+LambdaTest credentials: please refer to [this guide](https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials/?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample).
+
+### Deploy on Railway
+
+You can easily deploy this project on Railway using the button below:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/O6ga73?referralCode=-Yg50p)
+
 
 ## Table of Contents:
 
@@ -131,25 +149,6 @@ Once you are done with the above-mentioned steps, you can run your parallel test
 ```
 node playwright-parallel.js
 ```
-
-## Run Playwright Tests In Gitpod
-
-Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
-
-[<img alt="Run in Gitpod" width="200px" align="center" src="https://user-images.githubusercontent.com/70570645/169987363-1408c494-4e2a-4f12-8828-c931eac716b0.png" />](https://gitpod.io/#https://github.com/LambdaTest/playwright-sample)
-
-* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [LambdaTest Credentials](https://accounts.lambdatest.com/detail/profile) to Gitpod as environment variables:
-
-```
-eval $(gp env -e LT_USERNAME=******)
-eval $(gp env -e LT_ACCESS_KEY=******)
-  ```
-
-* Click the following link if you're unsure how to [access your LambdaTest credentials.](https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials/?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample). Also, if you start a new terminal in Gitpod, you have to run the following command to reset envrionment variables:
-```
- eval $(gp env -e)
-```
-For more information, refer to [Gitpod documentation](https://www.gitpod.io/docs/47_environment_variables/)
 
 ## Documentation & Resources :books:
 
