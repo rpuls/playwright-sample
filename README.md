@@ -40,12 +40,12 @@ You can easily deploy this project on Railway using the button below:
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/O6ga73?referralCode=-Yg50p)
 
-
 ## Table of Contents:
 
 * [Pre-requisites](#pre-requisites)
 * [Running Your First Playwright Test](#running-your-first-playwright-test)
 * [Parallel Testing](#parallel-testing)
+* [Scheduled Testing](#scheduled-testing)
 * [Migrate Playwright Tests](https://github.com/LambdaTest/playwright-sample/blob/main/pw-docs/migrate-playwright-tests.md)
 * [Test Execution Setup](https://github.com/LambdaTest/playwright-sample/blob/main/pw-docs/test-execution-setup.md)
 * [Local Testing](https://github.com/LambdaTest/playwright-sample/blob/main/pw-docs/local-testing.md)
@@ -123,9 +123,7 @@ On clicking the session name of the respective test, you can view the details of
 
 ## Parallel Testing With Playwright
 
-
 LambdaTest allows you to perform parallel testing with Playwright across 40+ browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
-
 
 Shown below are the steps on running parallel tests with Playright on the LambdaTest platform. 
 
@@ -150,9 +148,40 @@ Once you are done with the above-mentioned steps, you can run your parallel test
 node playwright-parallel.js
 ```
 
+## Scheduled Testing
+
+This project now includes a scheduled runner that allows you to run tests on a recurring basis or immediately. Here's how to use it:
+
+1. Copy the `.env.template` file to a new file named `.env`:
+
+```
+cp .env.template .env
+```
+
+2. Open the `.env` file and fill in your LambdaTest credentials (LT_USERNAME and LT_ACCESS_KEY).
+
+3. If you want to run tests on a schedule, set the UTC_SCHEDULED_START variable in the .env file. For example:
+
+```
+UTC_SCHEDULED_START=14:30
+```
+
+This will run the tests daily at 2:30 PM UTC.
+
+4. If you leave UTC_SCHEDULED_START empty, the tests will run immediately when you start the script.
+
+5. To start the runner, use the command:
+
+```
+npm start
+```
+
+The script will either schedule the tests to run daily at the specified time (UTC) or run them immediately if no schedule is set.
+
+Note: Make sure to add the .env file to your .gitignore to keep your credentials secure.
+
 ## Documentation & Resources :books:
 
-      
 Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
 
 * [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample)

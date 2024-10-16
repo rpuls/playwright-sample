@@ -1,7 +1,7 @@
 {
   "name": "lambdatest-playwright-sample",
   "scripts": {
-    "start": "node playwright-single.js",
+    "start": "node scheduled-runner.js",
     "test": "node playwright-single.js",
     "test-smartui": "node playwright-smartui.js",
     "test-parallel": "node playwright-parallel.js",
@@ -17,6 +17,8 @@
     "@playwright/test": "^1.35.0",
     "playwright": "^1.35.0",
     "@cucumber/cucumber": "^7.3.2",
-    "expect": "^29.5.0"
+    "expect": "^29.5.0",
+    "node-cron": "^3.0.2",
+    "dotenv": "^16.0.3"
   }
 }
